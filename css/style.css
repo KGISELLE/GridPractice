@@ -1,0 +1,373 @@
+/* Variables */
+:root{
+  --primary-color-button:  #c72727;
+  --secondary-color-button: #f99500;
+  --light-color: #f3f3f3;
+  --dark-color: #333;
+  /* --max-width: 1100px; */
+  /* --min-width: ; */
+}
+
+.category{
+  --sports-color: #f99500;
+  --ent-color: #a66bbe;
+  --tech-color: #009cff; 
+}
+
+/* setear los estilos por defecto */
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* la fuente se añade en body */
+body{
+  font-family: 'Lato', sans-serif;
+  line-height: 1.5;
+  background-color: var(--light-color);
+}
+
+a{
+  text-decoration: none;
+  color: var(--dark-color);
+}
+
+img{
+  /* darle el 100% de su contenedor */
+  width: 100%;
+}
+
+h1, h2, h3, h4, h5, h6{
+   font-family: 'Staatliches', cursive;
+}
+
+/* TODO: utilities */
+/* .container{
+  margin: auto;
+  padding: 0 2rem;
+  overflow: hidden;
+} */
+
+.category{
+  display: inline-block;
+  color: #fff;
+  font-size: 0.55rem;
+  padding: 0.4rem 0.6rem;
+  border-radius: 15px;
+  margin-bottom: 0.5rem;
+  text-transform: uppercase;
+}
+
+.category-sports{background-color: var(--sports-color)}
+.category-ent{background-color: var(--ent-color)}
+.category-tech{background-color: var(--tech-color)}
+
+.btn{
+  display: inline-block;
+  border: none;
+  background: var(--dark-color);
+  color: #fff;
+  padding: 0.5rem 1.5rem;
+}
+
+.btn-primary{background: var(--primary-color-button)}
+.btn-secondary{background: var(--secondary-color-button)}
+.btn-light{background: var(--light-color)}
+
+.btn:hover{
+  opacity:  0.9;
+}
+
+.btn-block{
+  display: block;
+  width: 100%;
+  text-align: center;
+}
+
+.card{
+  background-color: #fff;
+  /* border: #c72727 1px solid; */
+  padding: 1rem;
+}
+
+/* Estas clases las podemos adicionar al elemento HTML en ese archivo HTML */
+.bg-dark{
+  background: var(--dark-color);
+  color: #fff;
+}
+.bg-primary{
+  background: var(--primary-color-button);
+  color: #fff;
+}
+.bg-secondary{
+  background: var(--secondary-color-button);
+  color: #fff;
+}
+
+/* Estas clases las podemos adicionar al elemento HTML en ese archivo HTML */
+
+.px-1{ padding: 0 17% }
+.py-1{ padding: 1.5rem 0}
+.py-2{ padding: 2rem 0}
+.py-3{ padding: 3rem 0}
+.p-1{ padding: 1.5rem }
+.p-2{ padding: 2rem }
+.p-3{ padding: 3rem }
+
+
+/* Inner page grid container */
+.page-container{
+  display: grid;
+  grid-template-columns: 5fr 2fr;
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.l-heading{
+  font-size: 2rem;
+}
+
+
+/* elementos */
+/* TODO: NavBar */
+nav{
+  /* max-width: var(--max-width); */
+  background-color: #fff;
+  position: sticky;
+  display: grid;
+  grid-template-columns: 6fr 4fr 3fr;
+  align-items: center;
+  padding: 1rem;
+  top: 0;
+  z-index: 2;
+}
+
+nav .main-logo{
+  display: flex;
+  justify-content: center;
+}
+
+nav .main-logo img{
+  width: 180px;
+}
+
+nav .social-media{
+  /* justify-self: center; */
+  display: flex;
+  justify-content: center;
+}
+
+nav .social-media a{
+  color: #777;
+  /* padding: 20px 10px 10px; */
+  display: flex;
+  justify-content: center;
+  margin: 0px 4px;
+}
+
+
+.nav-buttons{
+  /* justify-self: end; */
+  display: flex;
+  /* flex-flow: row nowrap; */
+  justify-content: start;
+  list-style: none;
+}
+
+.nav-buttons li{
+  font-weight: bold;
+  background-color: var(--light-color);
+}
+
+.nav-buttons li a{
+  color: var(--dark-color);
+  padding: .5rem;
+}
+
+.nav-buttons .home-button a{
+  background-color: var(--primary-color-button);
+  color: #fff;
+}
+
+
+/* TODO: header - showcase*/
+header{
+  color: #fff;
+  background-color: #333;
+  padding: 2rem;
+  /* esto es importante porq la img de fondo sera la posicion absoluta */
+  position: relative;
+  /* width: 100%; */
+}
+
+/** Agregaremos la img desde aqui y se le dara position absolute */
+header:before{
+  content: '';
+  background: url(../assets/featured.jpg) no-repeat center center/cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.4;
+}
+
+header .showcase-container{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  /* grid-template-columns: 6fr 4fr 3fr; */
+  align-content: center;
+  /* place-content: center; */
+  height: 50vh;
+  /* padding: 1rem; */
+}
+
+header .showcase-content{
+  z-index: 1;
+  margin-left: 30%;
+}
+
+header .showcase-content p{
+  margin-bottom: 1rem;
+  /* width: 80%; */
+}
+
+/* ? Home Articles */
+/* Este copio propiedades de header .showcase-container y .showcase-content */
+.section-title{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  padding: 2rem;
+}
+h2{
+  margin-left: 30%;
+}
+
+section{
+  margin-bottom: 2rem;
+}
+
+.articles-container{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+}
+
+/* Estos son los estilos de la primera card */
+.articles-container .card:first-child, .articles-container .card:last-child{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+  grid-column: 1 / span 2;
+}
+
+.articles-container .card:last-child{
+  grid-column: 2 / span 2;
+}
+
+.articles-container .card:nth-child(3), .articles-container .card:nth-child(4), .articles-container .card:nth-child(5){
+  display: grid;
+  grid-template-rows: repeat(2, 1fr);
+  gap: 1rem;
+}
+
+.card img{
+  height: 100%;
+  object-fit: cover;
+}
+
+
+/* ? Footer */
+footer{
+  background-color: var(--dark-color);
+  color:#fff;
+}
+
+footer img{
+  width: 150px;
+}
+
+footer .list{
+  list-style: none;
+}
+
+footer a{
+  color: #fff;
+}
+
+footer a:hover{
+  color: var(--primary-color-button) !important;
+}
+
+footer .footer-container{
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+
+/* Elemento directo de .footer-container que es last-child */
+footer .footer-container > *:last-child{
+  grid-column: 1 / span 4;
+  background-color: #444;
+  padding: .5rem;
+  text-align: center;
+  font-size: 0.75rem;
+}
+
+footer .footer-container input[type="email"]{
+  width: 100%;
+  padding: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+footer .footer-container input[type="submit"]{
+  width: 100%;
+  padding: 0.5rem;
+}
+
+footer .footer-container p{
+  margin: .5rem 0;
+}
+
+.list li{
+  padding: .5rem 0;
+  border-bottom: #555 dotted 1px;
+  width: 90%;
+}
+
+
+/*! AboutPage */
+.page-container > *:first-child{
+  grid-row: 1 / span 3;
+}
+
+.page-container p{
+  text-align: justify;
+  margin: 1rem 0;
+}
+
+
+/*! ArticlePage */
+.meta{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #eee;
+}
+
+.meta .category{
+  margin-bottom: 0;
+}
+
+.meta small{
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+#categories ul{
+  list-style: none;
+}
